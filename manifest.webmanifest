@@ -1,13 +1,13 @@
 {
   "name": "Hermes Brain Studio",
   "short_name": "Hermes Brain",
-  "description": "Trung tâm theo dõi Tự học Nhân quả & Song sinh Năng lực Lớp 11",
+  "description": "Sổ theo dõi Tự học Nhân quả & Thẻ ôn Sổ Đen Lớp 11",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait-primary",
-  "background_color": "#070c17",
-  "theme_color": "#070c17",
+  "background_color": "#F7F6F2",
+  "theme_color": "#F7F6F2",
   "lang": "vi",
   "icons": [
     {

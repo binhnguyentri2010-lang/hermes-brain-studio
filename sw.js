@@ -1,4 +1,4 @@
-const CACHE_NAME = "hermes-brain-pwa-v1";
+const CACHE_NAME = "hermes-brain-pwa-v2";
 const ASSETS = ["./", "./index.html", "./manifest.webmanifest", "./apple-touch-icon.png", "./icon-192.png"];
 
 self.addEventListener("install", (event) => {
@@ -15,6 +15,11 @@ self.addEventListener("activate", (event) => {
 
 self.addEventListener("fetch", (event) => {
   if (event.request.method !== "GET") return;
+  const reqUrl = new URL(event.request.url);
+  if (reqUrl.searchParams.has("fresh") || reqUrl.searchParams.has("t")) {
+    event.respondWith(fetch(event.request, { cache: "no-store" }));
+    return;
+  }
   event.respondWith(
     fetch(event.request)
       .then((resp) => {
