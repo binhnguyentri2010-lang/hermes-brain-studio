@@ -1,4 +1,4 @@
-const CACHE_NAME = "hermes-brain-pwa-v3";
+const CACHE_NAME = "hermes-brain-pwa-v5";
 const ASSETS = ["./", "./index.html", "./manifest.webmanifest", "./apple-touch-icon.png", "./icon-192.png"];
 
 self.addEventListener("install", (event) => {
